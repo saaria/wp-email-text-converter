@@ -364,7 +364,7 @@ function change_str($content) {
 
   preg_match_all( $mailto_tag_pattern, $content, $mailto_tag_match );
 
-  for(v $j = 0; $j < count( $mailto_tag_match[0] ); $j++ ){
+  for( $j = 0; $j < count( $mailto_tag_match[0] ); $j++ ){
     preg_match( $email_pattern, $mailto_tag_match[0][$j], $email_match );
     $content = str_replace( $mailto_tag_match[0][$j], $email_match[0], $content );
   }
